@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FRQGAN4AD Project</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        header {
+            background-color: white;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.5rem 2rem;
+        }
+        header .logo {
+            display: flex;
+            align-items: center;
+        }
+        header .logo img {
+            height: 50px;
+            margin-right: 10px;
+        }
+        header nav {
+            display: flex;
+            gap: 2rem;
+        }
+        header nav a {
+            color: #003865;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1rem;
+        }
+        header nav a:hover {
+            text-decoration: underline;
+        }
+        section {
+            padding: 2rem;
+            margin: auto;
+            max-width: 900px;
+            background: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-top: 2rem;
+            border-radius: 8px;
+        }
+        .section-title {
+            color: #003865;
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background: #003865;
+            color: white;
+            margin-top: 2rem;
+        }
+        footer a {
+            color: #ffd700;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <a href="index.html"><img src="./logo.png" alt="Project Logo"></a>
+    </div>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="#">Project</a>
+        <a href="partners.html">Partners</a>
+        <a href="index.html#news">News</a>
+        <a href="index.html#contacts">Contacts</a>
+        <span></span>
+        <span></span>
+    </nav>
+</header>
+
+<section id="project">
+    <h2 class="section-title">The FRQGAN4AD Project</h2>
+    <p>
+        Anomaly detection is crucial in secure networks, but an obstacle is the scarcity of data that accurately represents abnormal behavior underlying attacks. This data limitation is a severe problem, but in recent years, Generative Adversarial Networks (GANs) have garnered significant attention due to their capacity to generate new data and alleviate the mentioned limitation. The utilization of GAN for anomaly detection in networks is a developing area with numerous prospects for further research. Training the discriminator in a GAN involves optimizing its parameters using real data to classify genuine samples correctly and challenging the discriminator’s ability to differentiate between real and generated samples, ultimately refining the quality of generated data over time. Ensuring a good balance between the generator and discriminator is crucial. As the optimization is resolved with metaheuristics, the GAN may not be adequately trained, which implies low-quality anomaly detection.
+    </p>
+
+    <h3 class="section-title">Objective</h3>
+    <p>
+        This project aims to meld the foundational principles of quantum mechanics with generative AI to obtain a Quantum GAN and exploit it for network anomaly detection. Two issues will be tackled:
+    </p>
+    <ol>
+        <li>
+            Quantum devices are characterized by noise from systematic errors originating from imperfectly calibrated devices and a quantum computer becoming entangled with the environment. These noisy computations may have an impact on QGAN training and usage, and can be dealt with ensemble learning.
+        </li>
+        <li>
+            NGIs are characterized by large sizes, and quantum devices are scarce. For this reason, a federated approach is needed, where local GANs will be trained on a local dataset by a given quantum device, and the weights of the regional models are aggregated to make the global model. The issue here is how to protect the federated learning from possible attacks. Therefore, the project will integrate the Fed-QGAN with a blockchain solution for tracing the iterative training of local and global models.
+        </li>
+    </ol>
+
+    <h3 class="section-title">Innovation</h3>
+    <p>
+        The application of QGAN for network anomaly detection is a novel solution. QGAN was first proposed in 2020 for image classification, and its use for network anomaly detection is novel. Also, the federated QGAN implementation is a novel solution, as only in the last two years has the issue of federating QML been investigated, mainly for Quantum Neural Networks. There are no holistic solutions that both realize a QGAN in a federated and robust way to cope with quantum noise, and its application to these thorny issues of network anomaly detection in NGI other than small, point solutions that handle specific challenges in other application domains.
+    </p>
+    <p>
+        Realizing such a capability will be a game-changer for network security, which can significantly disrupt network cybersecurity and enable the creation of new applications, business models, and market segments where quantum computing can leave labs and research centers and be applied to industrial use cases. Current network anomaly detection has a centralized approach and utilizes traditional GANs. The exploitation of quantum GANs has the potential to boost the accuracy and precision of the current solution and to cope with the advent of novel network technologies and the related sophisticated attacks that may be undetected with traditional GANs.
+    </p>
+    <p>
+        The federated approach to anomaly detection will have a considerable boost as well. Legal compliance with ML solutions to the EU AI Act is a pivotal issue nowadays, and integrating the HITL approach in anomaly detection is among the first attempts to achieve such compliance. The implemented software, as well as the identified dataset, will be uploaded on GitHub and made publicly available in order to promote possible collaborations and exploitation of the project results within the academic as well as industrial community.
+    </p>
+</section>
+
+<footer>
+    <p>For more information, visit the <a href="index.html">FRQGAN4AD Home Page</a>.</p>
+    <p>&copy; 2024 FRQGAN4AD Project. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
