@@ -23,7 +23,7 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: 0.5rem 2rem;
+            padding: 0.5rem 1rem;
         }
         header .logo {
             display: flex;
@@ -33,9 +33,20 @@
             height: 50px;
             margin-right: 10px;
         }
+        nav {
+            display: none;
+            flex-direction: column;
+            position: absolute;
+            top: 70px;
+            right: 0.1rem;
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+            overflow: hidden;
+        }
         header nav {
             display: flex;
-            gap: 2rem;
+            margin-right: 3rem;
         }
         header nav a {
             color: #003865;
@@ -45,6 +56,29 @@
         }
         header nav a:hover {
             text-decoration: underline;
+        }
+        nav a {
+            color: #003865;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1rem;
+            padding: 0.8rem 1.5rem;
+            display: block;
+        }
+        nav a:hover {
+            background-color: #f4f4f9;
+        }
+        .menu-icon {
+            display: flex;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+            margin-right: 2rem;
+        }
+        .menu-icon div {
+            width: 25px;
+            height: 3px;
+            background-color: #003865;
         }
         section {
             padding: 2rem;
@@ -90,6 +124,19 @@
         footer a:hover {
             text-decoration: underline;
         }
+        @media (min-width: 768px) {
+            nav {
+                display: flex !important;
+                flex-direction: row;
+                position: static;
+                box-shadow: none;
+                background: none;
+                border-radius: 0;
+            }
+            .menu-icon {
+                display: none;
+            }
+        }
     </style>
 </head>
 <body>
@@ -98,14 +145,17 @@
     <div class="logo">
         <img src="./logo.png" alt="Project Logo">
     </div>
-    <nav>
+    <div class="menu-icon" onclick="toggleMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <nav id="navMenu" style="display: none;">
         <a href="index.html">Home</a>
         <a href="project.html">Project</a>
         <a href="partners.html">Partners</a>
         <a href="news.html">News</a>
         <a href="contacts.html">Contacts</a>
-        <span></span>
-        <span></span>
     </nav>
 </header>
 
@@ -134,6 +184,14 @@
 <footer>
     <p>&copy; 2025 FRQGAN4AD Project. All rights reserved.</p>
 </footer>
+<script>
+    let isMenuOpen = false;
 
+    function toggleMenu() {
+        const navMenu = document.getElementById('navMenu');
+        isMenuOpen = !isMenuOpen;
+        navMenu.style.display = isMenuOpen ? 'flex' : 'none';
+    }
+</script>
 </body>
 </html>
